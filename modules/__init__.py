@@ -10,7 +10,8 @@ def get_Player(name_list, estructura, i):
 
 
 def max_Influence(estructura):
-    return max(estructura.items(), key= lambda x:(x[1]))[0]
+    points = [(nombre,float (((estadisticas[0]*1.5) + (estadisticas[1]*1.25) + estadisticas[2])/3)) for nombre,estadisticas in estructura.items()]
+    return max(points, key= lambda x:(x[1]))[0]
 
 
 def get_Average(estructura):
